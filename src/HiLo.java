@@ -11,6 +11,8 @@ public class HiLo {
 
 		// play again String variable
 		String playAgain = "";
+		// count number of tries
+		int count = 0;
 		// game loop
 		do {
 			// create random number from 1 - 100
@@ -22,11 +24,15 @@ public class HiLo {
 				System.out.println("Guess a number between 1 and 100.");
 				usersGuess = scanInput.nextInt();
 				if (usersGuess < theNumber) {
+					count += 1;
 					System.out.println(newLine + "Oops. " + usersGuess + " too low.");
 				} else if (usersGuess > theNumber) {
+					count += 1;
 					System.out.println(newLine + "Oops. " + usersGuess + " is too high.");
 				} else
+					count += 1;
 					System.out.println(usersGuess + " is correct!");
+					System.out.println("Your total amount of guesses: " + count);
 			} // end of while loop for guessing
 
 			// ask player if play again
