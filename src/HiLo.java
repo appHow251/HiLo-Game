@@ -23,14 +23,12 @@ public class HiLo {
 			while (usersGuess != theNumber) {
 				System.out.println("Guess a number between 1 and 100.");
 				usersGuess = scanInput.nextInt();
+				count++;
 				if (usersGuess < theNumber) {
-					count += 1;
 					System.out.println(newLine + "Oops. " + usersGuess + " too low.");
 				} else if (usersGuess > theNumber) {
-					count += 1;
 					System.out.println(newLine + "Oops. " + usersGuess + " is too high.");
 				} else
-					count += 1;
 					System.out.println(usersGuess + " is correct!");
 					System.out.println("Your total amount of guesses: " + count);
 			} // end of while loop for guessing
